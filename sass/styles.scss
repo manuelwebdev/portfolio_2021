@@ -4,3 +4,11 @@
 @import "mixins/mixins";
 
 @import "pages/landing";
+
+@include md {
+  @import "layout/landing-md";
+}
+
+@include lg {
+  @import "layout/landing-lg";
+}

@@ -1,0 +1,85 @@
+// Core text
+.head1 {
+  @include fontH1;
+}
+.head2 {
+  @include fontH2;
+}
+.head3 {
+  @include fontH3;
+}
+
+// Landing or Homepage
+
+.container {
+  .section {
+    .contentWrap {
+      &.sec1 {
+        height: 60vh;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 2em;
+        svg {
+          place-self: center;
+          margin-bottom: 0;
+        }
+        div.introWrap {
+          display: flex;
+          flex-flow: column nowrap;
+          .name {
+          }
+          .developer {
+          }
+          .cta {
+          }
+        }
+      }
+      &.sec2 {
+        .head2 {
+        }
+        .projCardsWrapper {
+          &::-webkit-scrollbar {
+          }
+          &::-webkit-scrollbar-track {
+          }
+          &::-webkit-scrollbar-thumb {
+          }
+          &::-webkit-scrollbar-thumb:hover {
+          }
+          .projCard {
+            .projName {
+            }
+            .projUrl {
+            }
+          }
+        }
+      }
+      &.sec3 {
+      }
+      &.sec4 {
+        div.aboutMe {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          gap: 2rem;
+          img.portrait {
+            margin: 0;
+          }
+          p {
+          }
+        }
+      }
+      h2 {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+// Footer
+.foot {
+  .footContainer {
+    .footTitle {
+    }
+  }
+}
