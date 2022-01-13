@@ -144,7 +144,21 @@
     .back {
       -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
+
+      display: flex;
+      flex-flow: column nowrap;
       &.card_back {
+      }
+      h2 {
+      }
+      .interests {
+        display: flex;
+        flex-flow: row wrap;
+        .pill {
+          padding: 4px 1rem;
+          border: 1px solid $accent;
+          border-radius: 40px;
+        }
       }
     }
   }
