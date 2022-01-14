@@ -167,6 +167,64 @@
           "dev"
           "design";
         padding-bottom: 3rem;
+        .toolset {
+          .skillCard {
+            padding: 1.5rem;
+            background-color: $primary;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            border-radius: $radius;
+            .head3.development {
+              align-self: center;
+              margin-bottom: 1rem;
+            }
+            .skill {
+              width: 100%;
+              margin-bottom: 0.75rem;
+              display: grid;
+              grid-template-columns: 80px 1fr;
+              h3.head3 {
+                font-size: 14px;
+                align-self: center;
+              }
+              .bar {
+                align-self: center;
+                min-width: 10px;
+                height: 12px;
+                background-color: $secondary;
+                border-radius: 0 50px 50px 0;
+                &.html {
+                  width: 80%;
+                }
+                &.css {
+                  width: 80%;
+                }
+                &.js {
+                  width: 40%;
+                }
+                &.bootstrap {
+                  width: 60%;
+                }
+                &.sass {
+                  width: 80%;
+                }
+                &.wordpress {
+                  width: 70%;
+                }
+                &.gsap {
+                  width: 50%;
+                }
+                &.flexbox {
+                  width: 90%;
+                }
+                &.grid {
+                  width: 90%;
+                }
+              }
+            }
+          }
+        }
         div.aboutMe {
           display: flex;
           flex-flow: column nowrap;
