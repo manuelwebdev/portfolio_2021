@@ -9,16 +9,6 @@
   @include fontH3;
 }
 
-// animations
-@keyframes hoverSlide {
-  from {
-    left: -30px;
-  }
-  to {
-    left: 0px;
-  }
-}
-
 // Landing or Homepage
 
 .container {
@@ -78,22 +68,12 @@
               border: none;
               padding: 0.55em;
               border-radius: 10px;
-              transition: all 2s;
-              -webkit-transition: all 2s;
-
-              &:hover::after {
-                font-family: "Font Awesome 5 Free";
-                content: "\f061";
-                animation: 0.5s hoverSlide;
-                transition: all 0.25;
-              }
+              transition: all 0.5s;
+              -webkit-transition: all 0.5s;
 
               &:hover {
                 background-color: darken($accent, 10%);
                 transition: all 0.5s;
-              }
-              &::after {
-                transition: all 5s;
               }
             }
           }
