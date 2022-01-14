@@ -52,6 +52,7 @@
           &::-webkit-scrollbar-thumb:hover {
           }
           .projCard {
+            text-decoration: none;
             .projName {
             }
             .projUrl {
@@ -67,15 +68,6 @@
           "title title"
           "profile dev"
           "profile design";
-        div.aboutMe {
-          display: grid;
-          grid-template-columns: 2fr 3fr;
-          grid-template-rows: auto;
-          gap: 2rem;
-          img.portrait {
-            margin: 0;
-          }
-        }
         .statCard {
           position: relative;
           width: 100%;
