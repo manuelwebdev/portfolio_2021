@@ -60,9 +60,6 @@
         }
       }
       &.sec3 {
-      }
-      &.sec4 {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
         grid-gap: 1rem;

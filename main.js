@@ -1,14 +1,9 @@
 // flippable card on About Me section
-let box = document.querySelector(".statCard");
-box.addEventListener("click", function () {
-  box.classList.toggle("active");
-});
+let profile = document.querySelector(".statCard.profile");
+let dev = document.querySelector(".statCard.dev");
+let design = document.querySelector(".statCard.design");
 
-// function keyFunction(e) {
-//   if (e.keyCode == 38) {
-//     box.classList.add("active");
-//   }
-//   if (e.keyCode == 40) {
-//     box.classList.remove("active");
-//   }
-// }
+let cards = [profile, dev, design];
+cards.forEach((element) => {
+  element.addEventListener("click", () => element.classList.toggle("active"));
+});
