@@ -51,8 +51,10 @@
           grid-area: title;
         }
         div.aboutMe {
+          height: 100%;
           flex-flow: column nowrap;
           .profileCard {
+            height: inherit;
             flex-flow: column nowrap;
             align-items: center;
             img.portrait {
