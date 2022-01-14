@@ -17,7 +17,7 @@
       &.sec1 {
         height: 60vh;
         display: grid;
-        grid-template: auto / 2fr 3fr;
+        grid-template: auto / 1fr 1fr;
         // flex-flow: row nowrap;
         align-items: center;
         padding: 2em;
@@ -33,7 +33,9 @@
           }
           .developer {
           }
-          .cta {
+          .callToAction {
+            .cta {
+            }
           }
         }
       }

@@ -9,6 +9,16 @@
   @include fontH3;
 }
 
+// animations
+@keyframes hoverSlide {
+  from {
+    left: -30px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
 // Landing or Homepage
 
 .container {
@@ -54,21 +64,37 @@
             color: #666666;
             margin-bottom: 2em;
           }
-          .cta {
-            @include cta;
-            width: 100%;
-            text-decoration: none;
-            color: #ffffff;
-            text-align: center;
-            background: $accent;
-            border: none;
-            padding: 0.55em;
-            border-radius: 10px;
-            transition: 0.5s;
+          .callToAction {
+            display: grid;
+            grid-template: auto / 1fr 1fr;
+            grid-gap: 1rem;
+            .cta {
+              @include cta;
+              width: 100%;
+              text-decoration: none;
+              color: #ffffff;
+              text-align: center;
+              background: $accent;
+              border: none;
+              padding: 0.55em;
+              border-radius: 10px;
+              transition: all 2s;
+              -webkit-transition: all 2s;
 
-            &:hover {
-              background-color: darken($accent, 10%);
-              transition: all 0.5s;
+              &:hover::after {
+                font-family: "Font Awesome 5 Free";
+                content: "\f061";
+                animation: 0.5s hoverSlide;
+                transition: all 0.25;
+              }
+
+              &:hover {
+                background-color: darken($accent, 10%);
+                transition: all 0.5s;
+              }
+              &::after {
+                transition: all 5s;
+              }
             }
           }
         }
