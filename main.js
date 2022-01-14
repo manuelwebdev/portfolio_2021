@@ -4,11 +4,11 @@ box.addEventListener("click", function () {
   box.classList.toggle("active");
 });
 
-function keyFunction(e) {
-  if (e.keyCode == 38) {
-    box.classList.add("active");
-  }
-  if (e.keyCode == 40) {
-    box.classList.remove("active");
-  }
-}
+// function keyFunction(e) {
+//   if (e.keyCode == 38) {
+//     box.classList.add("active");
+//   }
+//   if (e.keyCode == 40) {
+//     box.classList.remove("active");
+//   }
+// }

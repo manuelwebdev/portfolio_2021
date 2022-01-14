@@ -62,6 +62,14 @@
       &.sec3 {
       }
       &.sec4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 1rem;
+        grid-template-areas:
+          "title title"
+          "profile dev"
+          "profile design";
         div.aboutMe {
           display: grid;
           grid-template-columns: 2fr 3fr;
@@ -70,7 +78,98 @@
           img.portrait {
             margin: 0;
           }
-          p {
+        }
+        .statCard {
+          position: relative;
+          width: 100%;
+          min-height: 500px;
+          height: 100%;
+          max-height: max-content;
+          perspective: 1000px;
+          -webkit-perspective: 1000px;
+          border-radius: 10px;
+          &.profile {
+            grid-area: profile;
+          }
+          &.dev {
+            grid-area: dev;
+          }
+          &.design {
+            grid-area: design;
+          }
+          &.active {
+            .card {
+              -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+            }
+          }
+          .card {
+            padding: 1rem;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            transition: -webkit-transform 0.8s
+              cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.24);
+            cursor: pointer;
+            div {
+              // padding: 1rem;
+              // position: absolute;
+              width: 100%;
+              // height: 100%;
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
+              border-radius: 8px;
+              background: #fff;
+              display: flex;
+              justify-content: center;
+              // align-items: center;
+              font-size: 18px;
+              font-family: Open Sans;
+              color: #212121;
+            }
+            .front {
+              padding: 0.25rem;
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: flex-start;
+              align-items: center;
+              &.card_front {
+              }
+              .portrait {
+                max-width: 200px;
+                border-radius: 200px;
+                margin-bottom: 1rem;
+              }
+            }
+            .back {
+              -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+
+              display: flex;
+              flex-flow: column nowrap;
+              align-items: center;
+              &.card_back {
+              }
+              h2 {
+                z-index: 1;
+              }
+              .interests {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: flex-start;
+                .pill {
+                  padding: 4px 1rem;
+                  margin: 0 0.25rem 1rem 0;
+                  border: 1px solid $accent;
+                  border-radius: 40px;
+                }
+              }
+            }
           }
         }
       }
@@ -85,90 +184,6 @@
 .foot {
   .footContainer {
     .footTitle {
-    }
-  }
-}
-
-.statCard {
-  position: relative;
-  width: 350px;
-  min-height: 500px;
-  height: 100%;
-  max-height: max-content;
-  perspective: 1000px;
-  -webkit-perspective: 1000px;
-  border-radius: 8px;
-  &.active {
-    .card {
-      -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-    }
-  }
-  .card {
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.24);
-    cursor: pointer;
-    div {
-      // padding: 1rem;
-      // position: absolute;
-      width: 100%;
-      // height: 100%;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      border-radius: 8px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      // align-items: center;
-      font-size: 18px;
-      font-family: Open Sans;
-      color: #212121;
-    }
-    .front {
-      padding: 0.25rem;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: flex-start;
-      align-items: center;
-      &.card_front {
-      }
-      .portrait {
-        max-width: 200px;
-        border-radius: 200px;
-        margin-bottom: 1rem;
-      }
-    }
-    .back {
-      -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      &.card_back {
-      }
-      h2 {
-        z-index: 1;
-      }
-      .interests {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        .pill {
-          padding: 4px 1rem;
-          margin: 0 0.25rem 1rem 0;
-          border: 1px solid $accent;
-          border-radius: 40px;
-        }
-      }
     }
   }
 }
