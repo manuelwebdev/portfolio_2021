@@ -26,6 +26,7 @@ p {
     padding: 3rem 1rem;
     &.section1 {
       background-color: $primary;
+      padding: 0;
     }
     .contentWrap {
       max-width: 1200px;
