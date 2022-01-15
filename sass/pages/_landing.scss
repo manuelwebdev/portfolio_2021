@@ -12,6 +12,9 @@ body {
 .head3 {
   @include fontH3;
 }
+p {
+  @include p;
+}
 
 // Landing or Homepage
 
@@ -109,7 +112,7 @@ body {
             align-items: center;
             img.portrait {
               max-width: 200px;
-              margin: 1rem 0;
+              margin: 1rem 0 2rem 0;
               border: 8px solid $accent;
               border-radius: 100%;
             }

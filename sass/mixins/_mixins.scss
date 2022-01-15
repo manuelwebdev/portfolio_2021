@@ -30,6 +30,15 @@
   text-decoration: none;
 }
 
+@mixin p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 // call to action button
 @mixin cta {
   font-family: Lato;
