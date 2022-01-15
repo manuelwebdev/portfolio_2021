@@ -99,11 +99,15 @@ p {
           "toolset";
         h2.head2 {
           grid-area: title;
+          &.aboutMe {
+            margin-bottom: 0 !important;
+          }
         }
         div.aboutMe {
           grid-area: about;
           display: flex;
           flex-flow: column nowrap;
+
           .profileCard {
             padding: 1.5rem;
             background-color: $secondary;
@@ -120,6 +124,21 @@ p {
             p {
               color: $white;
               margin-bottom: 2rem;
+            }
+            h2.interestsTitle {
+              color: $white;
+            }
+            .interests {
+              display: flex;
+              flex-flow: row wrap;
+              .pill {
+                @include fontH3;
+                color: $white;
+                padding: 6px 1rem;
+                background-color: $accent;
+                border-radius: 100px;
+                margin: 0 0.75rem 1rem 0;
+              }
             }
           }
         }
@@ -383,6 +402,9 @@ p {
             }
           }
         }
+      }
+      h2 {
+        margin-bottom: 1em;
       }
     }
   }
