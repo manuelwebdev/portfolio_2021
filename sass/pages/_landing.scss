@@ -94,9 +94,9 @@ p {
         grid-template-rows: auto auto auto;
         grid-gap: 1rem;
         grid-template-areas:
-          "title"
-          "about"
-          "toolset";
+          'title'
+          'about'
+          'toolset';
         h2.head2 {
           grid-area: title;
           &.aboutMe {
@@ -180,6 +180,15 @@ p {
                   width: 80%;
                 }
                 &.js {
+                  width: 60%;
+                }
+                &.ts {
+                  width: 40%;
+                }
+                &.react {
+                  width: 50%;
+                }
+                &.sql {
                   width: 40%;
                 }
                 &.bootstrap {
@@ -358,24 +367,24 @@ p {
               box-shadow: $shadow;
               background-color: rgba(0, 0, 0, 0.15);
               transition: all 0.5s;
-            }                         
+            }
             &#bridgewoods {
-              background-image: url("/assets/images/bridgewoods.png"); 
+              background-image: url('/assets/images/bridgewoods.png');
             }
             &#oakcg {
-              background-image: url("/assets/images/oakcg.png");
+              background-image: url('/assets/images/oakcg.png');
             }
             &#solcrave {
-              background-image: url("/assets/images/solcrave.png");
+              background-image: url('/assets/images/solcrave.png');
             }
             &#resortboneyard {
-              background-image: url("/assets/images/resortboneyard.png");
+              background-image: url('/assets/images/resortboneyard.png');
             }
             &#dndSpells {
-              background-image: url("/assets/images/react-dnd.png");
+              background-image: url('/assets/images/react-dnd.png');
             }
             &#newInk {
-              background-image: url("/assets/images/newInk.png");
+              background-image: url('/assets/images/newInk.png');
             }
             &:hover .overlay {
               background-color: rgba(0, 0, 0, 0.1);
